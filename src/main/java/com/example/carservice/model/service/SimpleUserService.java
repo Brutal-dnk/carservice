@@ -53,7 +53,7 @@ public class SimpleUserService implements UserService {
         }
         try {
             String hashedPassword = passwordHasher.hashPassword(password);
-            return userDao.addUser(login, hashedPassword, Role.ADMIN);
+            return userDao.addUser(login, hashedPassword, Role.CLIENT);
         } catch (DaoException e) {
             LOG.error("Cannot add user as client, userLogin: " + login, e);
             throw new ServiceError("Cannot add user as client, userLogin: " + login, e);

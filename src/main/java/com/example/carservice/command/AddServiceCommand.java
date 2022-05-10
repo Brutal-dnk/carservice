@@ -18,6 +18,6 @@ public class AddServiceCommand implements Command{
         final String serviceName = request.getParameter("serviceName");
         final int serviceCost = Integer.parseInt(request.getParameter("serviceCost"));
         carServiceService.addService(serviceName,serviceCost);
-        return requestFactory.createRedirectResponse("/controller?command=addService");
+        return requestFactory.createRedirectResponse("/controller?command=addservicepage");
     }
 }
